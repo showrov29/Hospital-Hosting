@@ -107,7 +107,7 @@ export class PatientController {
        
         data.profilePic=file.filename;
 
-        return this.patientService.uploadProfilePic(id,data)
+        return  this.patientService.uploadProfilePic(id,data),{message:data.profilePic};
         
     }
 

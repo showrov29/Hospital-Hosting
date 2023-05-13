@@ -61,7 +61,7 @@ let PatientController = class PatientController {
     }
     uploadProfile(file, id, data) {
         data.profilePic = file.filename;
-        return this.patientService.uploadProfilePic(id, data);
+        return this.patientService.uploadProfilePic(id, data), { message: data.profilePic };
     }
     signout() {
         return { data: 'Logget out' };
