@@ -1,7 +1,7 @@
 import { Injectable } from "@nestjs/common";
 import { InjectRepository } from "@nestjs/typeorm";
 import { Repository } from "typeorm";
-import { StaffSalDto, UpdateStaffSalDto } from "../dto/StaffSal.dto";
+// import { StaffSalDto, UpdateStaffSalDto } from "../dto/StaffSal.dto";
 import { StaffSalEntity } from "../entity/staffSal.entity";
 
 @Injectable()
@@ -21,7 +21,7 @@ export class StaffSalService {
     getStaffSalByIdName(qry):any {
         return this.staffSalRepo.findOneBy({ id:qry.id });
    }
-   insertStaffSal(mydto: StaffSalDto): any{
+   insertStaffSal(mydto:any): any{
     const adminAccount = new StaffSalEntity()
     adminAccount.salary = mydto.salary;
     adminAccount.dateOfPayment = mydto.dateOfPayment;
@@ -30,10 +30,10 @@ export class StaffSalService {
     return this.staffSalRepo.save(adminAccount);
     }
 
-    updateStaffSalById(myData:StaffSalDto, id): any{
+    updateStaffSalById(myData:any, id): any{
         return this.staffSalRepo.update(id, myData);
     }
-    updateStaffPat(myData:UpdateStaffSalDto, id): any{
+    updateStaffPat(myData:any, id): any{
         return this.staffSalRepo.update(id, myData);
     }
     

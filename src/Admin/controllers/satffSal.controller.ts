@@ -1,5 +1,5 @@
 import { Body, Controller, Delete, Get, Param, ParseIntPipe, Patch, Post, Put, Query, UsePipes, ValidationPipe } from "@nestjs/common";
-import { StaffSalDto, UpdateStaffSalDto } from "../dto/StaffSal.dto";
+// import { StaffSalDto, UpdateStaffSalDto } from "../dto/StaffSal.dto";
 import { StaffSalService } from "../services/StaffSal.service";
 
 @Controller('staffSal')
@@ -22,7 +22,7 @@ export class StaffSalController {
 
   @Post('/insertStaffSal')
   @UsePipes(new ValidationPipe())
-  insertStaffSal(@Body(new ValidationPipe()) mydto: StaffSalDto): any{
+  insertStaffSal(@Body(new ValidationPipe()) mydto: any): any{
     return this.staffSalService.insertStaffSal(mydto);
   }
 
@@ -30,7 +30,7 @@ export class StaffSalController {
   @UsePipes(new ValidationPipe())
   //@UsePipes(new ValidationPipe())
   updateStaffSalById(
-    @Body(new ValidationPipe()) mydto: StaffSalDto,
+    @Body(new ValidationPipe()) mydto: any,
     @Param('id', ParseIntPipe) id: number,
   ): any {
     return this.staffSalService.updateStaffSalById(mydto, id);
@@ -38,7 +38,7 @@ export class StaffSalController {
    @Patch('/updateStaffSalPat/:id')
    @UsePipes(new ValidationPipe())
   // @UsePipes(new ValidationPipe())
-  updateStaffPat(@Param('id') id: string, @Body(new ValidationPipe()) StaffSalDto: UpdateStaffSalDto) {
+  updateStaffPat(@Param('id') id: string, @Body(new ValidationPipe()) StaffSalDto: any) {
     return this.staffSalService.updateStaffPat(StaffSalDto, id);
    }
 

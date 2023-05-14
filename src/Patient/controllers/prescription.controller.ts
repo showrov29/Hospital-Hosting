@@ -4,7 +4,7 @@ import { PatientService } from './../services/patient.service';
 import { Body, Controller, Delete, FileTypeValidator, Get, MaxFileSizeValidator, Param, ParseFilePipe, ParseIntPipe, Post, Put, Res, Session, UploadedFile, UseGuards, UseInterceptors, UsePipes, ValidationPipe } from "@nestjs/common";
 import { AmbulanceDTO } from "../DTOs/ambulance.dto";
 import { SessionGuardP } from '../session.guard';
-import { number } from 'yup';
+
 import { diskStorage } from 'multer';
 import { FileInterceptor } from '@nestjs/platform-express';
 
