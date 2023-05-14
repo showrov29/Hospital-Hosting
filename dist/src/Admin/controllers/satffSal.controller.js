@@ -14,7 +14,6 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.StaffSalController = void 0;
 const common_1 = require("@nestjs/common");
-const StaffSal_dto_1 = require("../dto/StaffSal.dto");
 const StaffSal_service_1 = require("../services/StaffSal.service");
 let StaffSalController = class StaffSalController {
     constructor(staffSalService) {
@@ -67,7 +66,7 @@ __decorate([
     (0, common_1.UsePipes)(new common_1.ValidationPipe()),
     __param(0, (0, common_1.Body)(new common_1.ValidationPipe())),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [StaffSal_dto_1.StaffSalDto]),
+    __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", Object)
 ], StaffSalController.prototype, "insertStaffSal", null);
 __decorate([
@@ -76,7 +75,7 @@ __decorate([
     __param(0, (0, common_1.Body)(new common_1.ValidationPipe())),
     __param(1, (0, common_1.Param)('id', common_1.ParseIntPipe)),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [StaffSal_dto_1.StaffSalDto, Number]),
+    __metadata("design:paramtypes", [Object, Number]),
     __metadata("design:returntype", Object)
 ], StaffSalController.prototype, "updateStaffSalById", null);
 __decorate([
@@ -85,7 +84,7 @@ __decorate([
     __param(0, (0, common_1.Param)('id')),
     __param(1, (0, common_1.Body)(new common_1.ValidationPipe())),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [String, StaffSal_dto_1.UpdateStaffSalDto]),
+    __metadata("design:paramtypes", [String, Object]),
     __metadata("design:returntype", void 0)
 ], StaffSalController.prototype, "updateStaffPat", null);
 __decorate([

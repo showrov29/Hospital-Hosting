@@ -61,4 +61,4 @@ __decorate([
     __metadata("design:type", String)
 ], UpdateStaffSalDto.prototype, "status", void 0);
 exports.UpdateStaffSalDto = UpdateStaffSalDto;
-//# sourceMappingURL=StaffSal.dto.js.map
+//# sourceMappingURL=staffSal.dto.js.map
