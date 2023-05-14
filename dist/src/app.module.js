@@ -19,11 +19,11 @@ let AppModule = class AppModule {
 AppModule = __decorate([
     (0, common_1.Module)({
         imports: [patient_module_1.PatientModule, admin_module_1.AdminModule, doctor_module_1.DoctorModule, typeorm_1.TypeOrmModule.forRoot({ type: 'postgres',
-                host: 'localhost',
-                port: 5432,
+                host: 'containers-us-west-147.railway.app',
+                port: 7801,
                 username: 'postgres',
-                password: 'root',
-                database: 'healthcare',
+                password: '1eCpV4zoggp23dcpyDIF',
+                database: 'railway',
                 autoLoadEntities: true,
                 synchronize: true,
             }),],

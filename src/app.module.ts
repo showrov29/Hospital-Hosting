@@ -12,11 +12,11 @@ import { AdminModule } from './Admin/module/admin.module';
 @Module({
   imports: [PatientModule ,AdminModule, DoctorModule, TypeOrmModule.forRoot(
     { type: 'postgres',
-     host: 'localhost',
-     port: 5432,
+     host: 'containers-us-west-147.railway.app',
+     port: 7801,
      username: 'postgres',
-     password: 'root',
-     database: 'healthcare',
+     password: '1eCpV4zoggp23dcpyDIF',
+     database: 'railway',
      autoLoadEntities: true,
      synchronize: true,
    }
