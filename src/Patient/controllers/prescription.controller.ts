@@ -13,17 +13,18 @@ export class PrescriptionController{
 
     constructor(private readonly prescriptionService: PrescriptionsService){}
     @Post("/prescribe")
-    // @UseInterceptors(FileInterceptor('pdf',{
-    //     storage:diskStorage({
-    //         destination:'./uploads/prescription',
-    //         filename: function(req,file,cb){
-    //             cb(null,Date.now()+file.originalname);
-    //         }
-    //     })
-    // }))
+    @UseInterceptors(FileInterceptor('pdf',{
+        storage:diskStorage({
+            destination:'./uploads/prescription',
+            filename: function(req,file,cb){
+                cb(null,Date.now()+file.originalname);
+            }
+        })
+    }))
     // @UseGuards(SessionGuardP)
     @UsePipes(new ValidationPipe())
     addPrescription(@Body() data:PrescriptionDTO): any{
+       
         return this.prescriptionService.addPrescription(data);
     }
 

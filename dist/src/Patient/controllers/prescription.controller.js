@@ -49,6 +49,14 @@ let PrescriptionController = class PrescriptionController {
 };
 __decorate([
     (0, common_1.Post)("/prescribe"),
+    (0, common_1.UseInterceptors)((0, platform_express_1.FileInterceptor)('pdf', {
+        storage: (0, multer_1.diskStorage)({
+            destination: './uploads/prescription',
+            filename: function (req, file, cb) {
+                cb(null, Date.now() + file.originalname);
+            }
+        })
+    })),
     (0, common_1.UsePipes)(new common_1.ValidationPipe()),
     __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),

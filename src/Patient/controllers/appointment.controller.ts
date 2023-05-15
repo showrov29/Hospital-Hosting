@@ -2,7 +2,7 @@ import { AppointmentDTO } from './../DTOs/appointment.dto';
 import { AppoinmentService } from './../services/appointment.service';
 import { Body, Controller, Delete, Get, Param, ParseIntPipe, Post, Put, Session, UseGuards, UsePipes, ValidationPipe } from "@nestjs/common";
 import { SessionGuardP } from '../session.guard';
-import { log } from 'console';
+
 
 
 @Controller('appointment')
