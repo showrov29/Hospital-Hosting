@@ -1,5 +1,5 @@
 import { Body, Controller, Delete, Get, Param, ParseIntPipe, Patch, Post, Put, Query, UsePipes, ValidationPipe } from "@nestjs/common";
-// import { StaffSalDto, UpdateStaffSalDto } from "../dto/StaffSal.dto";
+ import { StaffSalDto, UpdateStaffSalDto } from "../dto/staffSal.dto";
 import { StaffSalService } from "../services/StaffSal.service";
 
 @Controller('staffSal')
